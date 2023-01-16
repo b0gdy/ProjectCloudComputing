@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<nav style="text-align: center; padding: 10px;">
+	<a style="text-decoration: none; color:black; padding: 10px;" href="http://localhost:8001/artists/add">Add artist</a>
+	<a style="text-decoration: none; color:black; padding: 10px;" href="http://localhost:8001/artists">Artists list</a>
+	<a style="text-decoration: none; color:black; padding: 10px;" href="http://localhost:8001/songs/add">Add song</a>
+	<a style="text-decoration: none; color:black; padding: 10px;" href="http://localhost:8001/songs">Songs list</a>
+	<a style="text-decoration: none; color:black; padding: 10px;" href="http://localhost:8002/users/add">Add user</a>
+	<a style="text-decoration: none; color:black; padding: 10px;" href="http://localhost:8002/users">Users list</a>
+</nav>
+<hr>
+
+<div style="padding: 10px; width: 30%; margin: auto;">
+<h2 style="padding: 10px; text-align: center;">Artists List</h2>
+
+<table style="border-collapse: collapse; width: 100%; padding: 10px; margin: auto;">
+	<tr style="border-bottom: 1px solid black; border-top: 1px solid black;">
+		<th style="padding: 10px; text-align: left;">Artist ID</th>
+		<th style="padding: 10px; text-align: left;">Artist Name</th>
+	</tr>
+{% for artist in artists %}
+	<tr style="border-bottom: 1px solid black;">
+		<td style="padding: 10px;">{{ artist['id'] }}</td>
+		<td style="padding: 10px;">{{ artist['name'] }}</td>
+	</tr>
+{% endfor %}
+</table>
+</div>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<nav style="text-align: center; padding: 10px;">
+	<a style="text-decoration: none; color:black; padding: 10px;" href="http://localhost:8001/artists/add">Add artist</a>
+	<a style="text-decoration: none; color:black; padding: 10px;" href="http://localhost:8001/artists">Artists list</a>
+	<a style="text-decoration: none; color:black; padding: 10px;" href="http://localhost:8001/songs/add">Add song</a>
+	<a style="text-decoration: none; color:black; padding: 10px;" href="http://localhost:8001/songs">Songs list</a>
+	<a style="text-decoration: none; color:black; padding: 10px;" href="http://localhost:8002/users/add">Add user</a>
+	<a style="text-decoration: none; color:black; padding: 10px;" href="http://localhost:8002/users">Users list</a>
+</nav>
+<hr>
+
+<div style="padding: 10px; width: 20%; margin: auto;">
+<h2 style="padding: 10px; text-align: center;">Add a new song</h2>
+
+<form method="post" style="padding: 10px">
+	<label for="name">Song Name</label><br>
+	<input type="text" name="name" placeholder="Song Name" value="{{ request.form['name'] }}" style="width: 100%;"></input><br><br>
+	
+	<label for="artistName">Artist name</label><br>
+	<input type="text" name="artistName" placeholder="Artist Name" value="{{ request.form['artistName'] }}" style="width: 100%;"></input><br><br>
+	
+	<button type="submit" style="position: absolute; left: 50%; transform: translateX(-50%);">Save</button><br><br>
+</form>
+</div>
+
